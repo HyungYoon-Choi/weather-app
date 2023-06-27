@@ -6,10 +6,11 @@ $(function () {
     let key = '';
     let myLat = 0,
         myLon = 0;
-    app.geolocation = false;
+    var app = {};
+    app.geolocation = navigator.geolocation;
 
     $('.threetemp-body').slick(
-        {slidesToShow: 3, slidesToScroll: 1, dots: false, centerMode: true, focusOnSelect: true}
+        { slidesToShow: 3, slidesToScroll: 1, dots: false, centerMode: true, focusOnSelect: true }
     );
 
     $('#searchbtn').on('click', function () {
@@ -50,7 +51,7 @@ $(function () {
                 myLat = position.coords.latitude;
                 myLon = position.coords.longitude;
                 getWeather(myLat, myLon, '');
-            }, function (error) {}, {
+            }, function (error) { }, {
                 enableHightAccuracy: true,
                 timeout: 15000,
                 maximumAge: 0
