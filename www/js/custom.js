@@ -1,6 +1,6 @@
 const url = 'https://api.openweathermap.org/data/2.5/forecast';
 const url2 = 'https://api.openweathermap.org/data/2.5/weather';
-const mykey = '8274a36be5fbfca3dfe9318ece5b2b80';
+const mykey = '';
 
 $(function () {
     let key = '';
